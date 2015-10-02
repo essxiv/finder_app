@@ -3,3 +3,5 @@ $:unshift(File.join(APP_ROOT, 'lib'))
 
 require 'guide'
 
+guide = Guide.new('dictionary.txt')
+guide.launch!
