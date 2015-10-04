@@ -25,6 +25,11 @@ class Guide
     def launch!
         introduction
         #process
+        result = nil
+        until result == :quit do
+            action = get_action
+            result = do_action(action)
+        end
         conclusion
     end
 
