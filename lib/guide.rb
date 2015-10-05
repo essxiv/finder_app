@@ -11,14 +11,17 @@ class Guide
     end
 
     def initialize(@path=nil)
+        # locates the file at path
         Dictionary.filepath = path
 
         if Dictionary.file_usable?
             puts "File Found."
+        # or creates a new file
         elsif Dictionary.create_file
             puts "File Created."
         else
             puts "Error, Exiting.."
+            exit!
         end 
     end
 
